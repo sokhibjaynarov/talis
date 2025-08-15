@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boshqaruv samaradorligini baholash mexanizmini xalqaro TALIS dasturi talablari asosida takomillashtirish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Chart konteynerining balandligi */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #00A6ED, #0E6BA8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .kpi-card {
+            background-color: #f8fafc;
+            border-left: 5px solid #00A6ED;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #00A6ED;
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+        #uzbekiston-talis .section-title::after {
+             background-color: #ffffff;
+        }
+        .question-box {
+            background-color: #e0f2f7;
+            border-left: 8px solid #0E6BA8;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+        .country-list-container {
+            column-count: 2;
+            column-gap: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        @media (min-width: 768px) {
+            .country-list-container {
+                column-count: 3;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                <span class="text-[#0E6BA8]">TALIS</span> <span class="text-[#00A6ED]">2024</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#kirish" class="text-gray-600 hover:text-[#00A6ED]">Kirish</a>
+                <a href="#talis-2018-natijalari" class="text-gray-600 hover:text-[#00A6ED]">2018 Natijalari</a>
+                <a href="#qiyosiy-tahlil" class="text-gray-600 hover:text-[#00A6ED]">Qiyosiy Tahlil</a>
+                <a href="#uzbekiston-talis" class="text-gray-600 hover:text-[#00A6ED]">O'zbekiston</a>
+                <a href="#xulosa" class="text-gray-600 hover:text-[#00A6ED]">Xulosa</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="kirish" class="text-center py-16 px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <span class="gradient-text">Boshqaruv Samaradorligini Baholash Mexanizmini TALIS dasturi asosida takomillashtirish</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Xalqaro TALIS dasturi talablari asosida O'zbekiston ta'lim tizimida maktab boshqaruvi va direktorlik salohiyatini oshirish ta'lim sifatini oshirishga xizmat qiladi. TALIS tadqiqotining tahliliy ma'lumotlari ta'lim tizimidagi chuqur o'zgarishlar uchun ilmiy asos bo'lib xizmat qiladi.
+            </p>
+            <a href="#talis-haqida" class="bg-gradient-to-r from-[#00A6ED] to-[#0E6BA8] text-white font-bold py-3 px-8 rounded-full hover:shadow-lg transition-transform transform hover:scale-105">
+                Ko'proq bilish
+            </a>
+        </section>
+
+        <section id="talis-haqida" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">I qism: Kirish va TALIS tadqiqoti</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">TALIS Nima?</h3>
+                    <p class="text-gray-600">
+                        Bu o'qituvchilar va maktab direktorlarining ish sharoitlari, kasbiy rivojlanishi va pedagogik amaliyotlarini o'rganuvchi yagona keng ko'lamli xalqaro tadqiqotdir. Maqsad – ta'lim siyosatini ilmiy asoslangan ma'lumotlar bilan ta'minlash.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">Tashkilotchilar Sinergiyasi</h3>
+                    <p class="text-gray-600">
+                        OECD (Iqtisodiy hamkorlik va taraqqiyot tashkiloti) va IEA (Ta'limdagi yutuqlarni baholash xalqaro assotsiatsiyasi) hamkorligida tashkil etiladi. Bu hamkorlik direktorlik amaliyotining tizimli ahamiyatini ko'rsatadi.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">Nega Boshqaruv Muhim?</h3>
+                    <p class="text-gray-600">
+                        Samarali maktab direktori o'quv muhitini yaratadi, o'qituvchilarning kasbiy o'sishini qo'llab-quvvatlaydi va islohotlarning muvaffaqiyatini ta'minlaydi. TALIS aynan shu markaziy bo'g'inni tahlil qiladi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Sizning fikringiz: Xalqaro tadqiqotlarning O'zbekiston ta'lim tizimi uchun ahamiyati</h3>
+                <p class="text-gray-700">Sizningcha, PISA, TIMSS va ayniqsa TALIS kabi xalqaro taqqoslovchi tadqiqotlar O'zbekiston ta'lim tizimining rivojlanishi uchun qanday amaliy ahamiyatga ega bo'lishi mumkin? Ularning natijalari qanday qarorlar qabul qilishga yordam beradi?</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">TALISning Asosiy Yo'nalishlari</h3>
+                <p class="text-gray-600 mb-4">
+                    TALIS maktablardagi ekotizimni keng qamrovli tahlil qiladi, direktorning faoliyatini quyidagi asosiy yo'nalishlar bo'yicha baholaydi.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🗓️</span>
+                        <p class="font-medium text-gray-700">O'qituvchilarning ish sharoitlari</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">📚</span>
+                        <p class="font-medium text-gray-700">Kasbiy rivojlanish</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🧑‍🏫</span>
+                        <p class="font-medium text-gray-700">Pedagogik amaliyotlar</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🤝</span>
+                        <p class="font-medium text-gray-700">Maktab madaniyati va boshqaruvi</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">😊</span>
+                        <p class="font-medium text-gray-700">O'qituvchilarning kasbiy qoniqishi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Direktorning maktab madaniyatini shakllantirishdagi o'rni</h3>
+                <p class="text-gray-700">Sizningcha, maktab direktori maktabdagi o'quv-tarbiya jarayoniga bevosita aralashmasdan ham, faqatgina maktab madaniyatini shakllantirish orqali ta'lim sifatiga qanchalik katta ta'sir ko'rsata oladi? Misollar keltiring.</p>
+            </div>
+        </section>
+
+        <section id="talis-2018-natijalari" class="py-16 bg-gray-100 -mx-4 md:-mx-8 px-4 md:px-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">II qism: TALIS 2018 tadqiqotining tahlili</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
+                    <div class="text-5xl font-extrabold text-[#00A6ED]">48</div>
+                    <div class="text-lg text-gray-600 mt-2">Mamlakat & Mintaqa</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
+                    <div class="text-5xl font-extrabold text-[#00A6ED]">260k+</div>
+                    <div class="text-lg text-gray-600 mt-2">O'qituvchi</div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
+                    <div class="text-5xl font-extrabold text-[#00A6ED]">13k+</div>
+                    <div class="text-lg text-gray-600 mt-2">Maktab Direktori</div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">TALIS 2018: Ishtirokchi davlatlar va hududlar</h3>
+                <p class="text-gray-600 mb-4">
+                    TALIS 2018 tadqiqotida dunyoning 48 ta mamlakati va iqtisodiy mintaqalari qamrab olindi. Bu tadqiqot natijalarining global miqyosda ishonchliligini va taqqoslanuvchanligini ta'minlaydi.
+                </p>
+                <div class="country-list-container text-gray-700 text-sm">
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Avstraliya</li>
+                        <li>Avstriya</li>
+                        <li>Belgiya (Flamand hamjamiyati)</li>
+                        <li>Belgiya (Fransuz hamjamiyati)</li>
+                        <li>Braziliya</li>
+                        <li>Bolgariya</li>
+                        <li>Kanada (barcha provinsiyalar va hududlar umumiy)</li>
+                        <li>Chili</li>
+                        <li>Kolumbiya</li>
+                        <li>Xorvatiya</li>
+                        <li>Chexiya Respublikasi</li>
+                        <li>Daniya</li>
+                        <li>Angliya (Buyuk Britaniya)</li>
+                        <li>Estoniya</li>
+                        <li>Finlyandiya</li>
+                        <li>Fransiya</li>
+                        <li>Gruziya</li>
+                        <li>Germaniya</li>
+                        <li>Vengriya</li>
+                        <li>Islandiya</li>
+                        <li>Irlandiya</li>
+                        <li>Isroil</li>
+                        <li>Italiya</li>
+                        <li>Yaponiya</li>
+                        <li>Qozog'iston</li>
+                        <li>Koreya</li>
+                        <li>Latviya</li>
+                        <li>Litvaniya</li>
+                        <li>Malta</li>
+                        <li>Meksika</li>
+                        <li>Niderlandiya</li>
+                        <li>Yangi Zelandiya</li>
+                        <li>Shimoliy Makedoniya</li>
+                        <li>Norvegiya</li>
+                        <li>Polsha</li>
+                        <li>Portugaliya</li>
+                        <li>Ruminiya</li>
+                        <li>Rossiya Federatsiyasi</li>
+                        <li>Serbiya</li>
+                        <li>Singapur</li>
+                        <li>Slovakiya Respublikasi</li>
+                        <li>Sloveniya</li>
+                        <li>Janubiy Afrika</li>
+                        <li>Ispaniya</li>
+                        <li>Shvetsiya</li>
+                        <li>Turkiya</li>
+                        <li>Birlashgan Arab Amirliklari</li>
+                        <li>AQSh</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktor Vaqti: Ma'muriyat va Pedagogika o'rtasidagi muvozanat</h3>
+                    <p class="text-gray-600 mb-4">
+                        TALIS 2018 natijalariga ko'ra, direktorlar o'z ish vaqtining sezilarli qismini ma'muriy vazifalarga (byudjet, jadval tuzish) sarflaydi. Pedagogik yetakchilik (o'quv dasturlarini nazorat qilish, o'qituvchilar bilan ishlash) uchun kamroq vaqt qoladi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="directorTimeChart"></canvas>
+                    </div>
+                </div>
+                <div class="question-box">
+                    <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: O'zbekistonda direktor vaqtini optimallashtirish</h3>
+                    <p class="text-gray-700">O'zbekiston sharoitida maktab direktorlarining ma'muriy yukini qanday kamaytirish va ularning pedagogik yetakchilik rolini qanday kuchaytirish mumkin? Sizningcha, qanday tizimli o'zgarishlar zarur?</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">O'qituvchi avtonomiyasi va qaror qabul qilishdagi ishtirok</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tadqiqot natijalari o'qituvchilarning maktabdagi qarorlarni qabul qilishdagi ishtiroki mamlakatlarda turlicha ekanligini ko'rsatdi. Yuqori avtonomiya va ishtirokga ega o'qituvchilarning kasbiy qoniqishi va innovatsion faoliyati yuqoriroq bo'ladi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="teacherAutonomyChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Kasbiy rivojlanish va direktorning strategik qo'llab-quvvatlashi</h3>
+                    <p class="text-gray-600 mb-4">
+                        TALIS 2018 shuni ko'rsatdiki, direktorning kasbiy rivojlanishni doimiy rag'batlantirishi o'qituvchilarning yangi ko'nikmalarni egallashiga bevosita ta'sir qiladi. Eng ko'p ehtiyoj raqamli pedagogika, inklyuzivlik va innovatsiyada.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="professionalDevelopmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Direktor raqamli transformatsiyada qanday yetakchilik qilishi kerak?</h3>
+                <p class="text-gray-700">Raqamli ta'lim texnologiyalari jadal rivojlanayotgan bir paytda, maktab direktori o'qituvchilar va o'quvchilarda raqamli kompetensiyalarni shakllantirishda qanday boshqaruv strategiyalarini qo'llashi kerak? Bunda ularning o'zi qanday tayyorgarlikka ega bo'lishi lozim?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">O'qituvchi Motivatsiyasi: Muhitning Rol-o'rni</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tadqiqot shuni ko'rsatdiki, o'qituvchilarning kasbiy qoniqishi uchun maoshdan ko'ra, maktabdagi sog'lom muhit, direktorning qo'llab-quvvatlashi va hamkasblar bilan hamkorlik muhimroqdir.
+                    </p>
+                     <div class="chart-container">
+                        <canvas id="motivationChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Maktab intizomi va xavfsizligi: Direktorning me'moriy roli</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tartibli va xavfsiz maktab muhitini yaratishda direktorning faoliyati asosiy hisoblanadi. Har bir davlatda o'ziga xos intizom yondashuvlari mavjud.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="disciplineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">TALIS 2018dan maktab boshqaruvining strategik xulosalari</h3>
+                <p class="text-gray-600 mb-4">
+                    TALIS 2018 natijalari bo'yicha muvaffaqiyatli direktorlikning asosiy formulasi quyidagi beshta ustuvorlikni o'z ichiga oladi:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">⏰</span>
+                        <p class="font-medium text-gray-700">Vaqtni qayta taqsimlash</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🧑‍🎓</span>
+                        <p class="font-medium text-gray-700">O'qituvchiga avtonomiya berish</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">📈</span>
+                        <p class="font-medium text-gray-700">Uzluksiz rivojlanishga investitsiya</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🤝</span>
+                        <p class="font-medium text-gray-700">Ijobiy maktab madaniyatini shakllantirish</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🔒</span>
+                        <p class="font-medium text-gray-700">Tizimli intizom va xavfsizlik</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Maktabda ijobiy muhit yaratish</h3>
+                <p class="text-gray-700">Sizningcha, maktab direktorlari o'qituvchilarni maoshdan tashqari qanday omillar bilan motivatsiya qila oladi va ularning kasbiy qoniqishini oshirish uchun qanday muhit yaratishi kerak? Maktabdagi qanday madaniyat o'qituvchilarning samaradorligini oshiradi?</p>
+            </div>
+        </section>
+
+        <section id="qiyosiy-tahlil" class="py-16">
+             <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">III qism: Liderlardan Saboqlar: Boshqaruv Modellari</h2>
+             <p class="text-center text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                 Singapur, Kanada va Finlyandiya kabi global ta'lim liderlari o'zlarining noyob va samarali maktab boshqaruvi modellari bilan ajralib turadi. Ularning tajribasini tahlil qilish, O'zbekiston uchun kelajak strategiyalarini ishlab chiqishda muhimdir.
+             </p>
+
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Boshqaruvning Uch Modeli: Asosiy farqlar</h3>
+                     <p class="text-gray-600 mb-4">
+                         Ushbu radar diagrammasi uch davlatning avtonomiya, markazlashuv, hisobdorlik, kasbiy rivojlanish va hamkorlik kabi jihatlardagi yondashuvlarini taqqoslaydi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="countryComparisonChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-6 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h4 class="font-bold text-lg text-[#0E6BA8] flex items-center">🇫🇮 Finlyandiya: Ishonch va Professionalizm</h4>
+                        <p class="text-gray-600 mt-2">Direktor va o'qituvchilarga yuqori darajada ishonch bildiriladi, minimal nazorat va yuqori kasbiy avtonomiya.</p>
+                    </div>
+                    <div class="mb-6 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h4 class="font-bold text-lg text-[#0E6BA8] flex items-center">🇨🇦 Kanada: Demokratik va Hamkorlik</h4>
+                        <p class="text-gray-600 mt-2">Boshqaruv markazsizlashtirilgan. Qarorlar jamoatchilik va ota-onalar ishtirokida qabul qilinadi.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h4 class="font-bold text-lg text-[#0E6BA8] flex items-center">🇸🇬 Singapur: Tizimli va Natijadorlik</h4>
+                        <p class="text-gray-600 mt-2">Direktorlarni tanlash va tayyorlashga qattiq yondashiladi, tizim natijaga yo'naltirilgan va yuqori hisobdorlikka asoslanadi.</p>
+                    </div>
+                </div>
+             </div>
+
+             <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Direktor lavozimiga tayinlash mezonlari</h3>
+                <p class="text-gray-700">Yuqorida ko'rib chiqqanimizdek, Singapur va Finlyandiyada direktorlik lavozimiga kadrlar tanlash va tayyorlash jarayoniga katta e'tibor beriladi. Sizningcha, O'zbekistonda maktab direktorlari lavozimiga nomzodlarni tanlash mezonlari va tayyorlash tizimi qanday takomillashtirilishi kerak?</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktor vaqtining taqsimoti: Qiyosiy tahlil</h3>
+                    <p class="text-gray-600 mb-4">
+                        Turli mamlakatlarda direktorlar o'z vaqtini ma'muriy va pedagogik vazifalar o'rtasida qanday taqsimlaydi? Finlyandiya pedagogik yetakchilikka ko'proq e'tibor qaratadi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="compDirectorTimeChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Qaror qabul qilishdagi avtonomiya va ishtirok: Qiyosiy tahlil</h3>
+                    <p class="text-gray-600 mb-4">
+                        O'qituvchilar va direktorlarning qaror qabul qilishdagi avtonomiyasi hamda jamoatchilik ishtiroki har bir modelda o'ziga xos tarzda namoyon bo'ladi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="compAutonomyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktorning o'qituvchilar rivojlanishiga ta'siri: Qiyosiy tahlil</h3>
+                    <p class="text-gray-600 mb-4">
+                        Har bir davlatda direktorlar o'qituvchilarning professional o'sishini qanday yo'naltiradi va qo'llab-quvvatlaydi? Singapurda strategik maqsadlar, Finlyandiyada individual ehtiyojlar muhim.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="compPDChart"></canvas>
+                    </div>
+                </div>
+                 <div class="question-box">
+                    <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Mahalliy muxtoriyat va boshqaruv</h3>
+                    <p class="text-gray-700">Kanada tajribasidan kelib chiqib, O'zbekistonda maktablarga mahalliy darajada ko'proq muxtoriyat berish qanchalik samarali bo'lishi mumkin? Bunday o'zgarishlar qanday afzalliklar va qanday xavflarni keltirib chiqarishi mumkin?</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Maktab madaniyati va o'qituvchi qoniqishi: Boshqaruvning psixologik ta'siri</h3>
+                    <p class="text-gray-600 mb-4">
+                        Direktorning rahbarligi, adolatli va ochiq munosabati o'qituvchilarning motivatsiyasi va kasbiy qoniqishida hal qiluvchi rol o'ynaydi. Finlyandiyada yuqori ishonch, Kanadada demokratik muhit, Singapurda professional o'sish qoniqishni ta'minlaydi.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="compSatisfactionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktorning intizom va xavfsizligi: Direktorning me'moriy roli</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tartibli va xavfsiz maktab muhitini yaratishda direktorning faoliyati asosiy hisoblanadi. Har bir davlatda o'ziga xos intizom yondashuvlari mavjud.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="compDisciplineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Global saboqlar: O'zbekistonda boshqaruvni transformatsiya qilish</h3>
+                <p class="text-gray-600 mb-4">
+                    Uch davlatning tajribasidan kelib chiqib, O'zbekiston maktab boshqaruvini takomillashtirish uchun quyidagi strategik yo'nalishlar taklif etiladi:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🧑‍🏫</span>
+                        <p class="font-medium text-gray-700">Samarali kadrlar zaxirasini yaratish</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">⚖️</span>
+                        <p class="font-medium text-gray-700">Avtonomiya va hisobdorlikni muvozanatlash</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🗳️</span>
+                        <p class="font-medium text-gray-700">Demokratik boshqaruv va jamoatchilik ishtiroki</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">📚</span>
+                        <p class="font-medium text-gray-700">Pedagogik yetakchilikni ustuvor qilish</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                        <span class="text-3xl text-[#0E6BA8] mr-3">🤝</span>
+                        <p class="font-medium text-gray-700">Xalqaro tajribalarni moslashtirish</p>
+                    </div>
+                </div>
+            </div>
+             <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: Xalqaro tajribalarni O'zbekiston sharoitiga moslashtirish</h3>
+                <p class="text-gray-700">Sizningcha, Singapur, Kanada va Finlyandiyaning maktab boshqaruvi bo'yicha eng yaxshi amaliyotlarini O'zbekiston ta'lim tizimiga qanday qilib eng samarali tarzda moslashtirish mumkin? Bunda qanday milliy xususiyatlar inobatga olinishi kerak?</p>
+            </div>
+        </section>
+
+        <section id="uzbekiston-talis" class="py-16 bg-gradient-to-br from-[#00A6ED] to-[#0E6BA8] text-white -mx-4 md:-mx-8 px-4 md:px-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">IV qism: O'zbekiston uchun TALISning ahamiyati va kelajak istiqbollari</h2>
+            <div class="text-center max-w-4xl mx-auto">
+                <p class="text-xl mb-4">
+                    🇺🇿 O'zbekistonning TALIS 2024 tadqiqotida ilk bor ishtirok etishi – bu mamlakatimiz ta'lim tizimining xalqaro standartlarga intilayotgani va o'zini tanqidiy baholashga tayyorligining yorqin namunasidir.
+                </p>
+                <p class="text-lg mb-8 opacity-90">
+                    Ushbu tadqiqot milliy ta'lim siyosatini ilmiy asoslangan ma'lumotlar bilan boyitish, direktorlik korpusining salohiyatini oshirish va maktablarda sog'lom boshqaruv muhitini yaratish uchun noyob imkoniyatdir.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8 text-gray-800">
+                <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">TALIS 2024: Ishtirokchi davlatlar va hududlar – Global ta'lim panoramasining kengayishi</h3>
+                <p class="text-gray-600 mb-4">
+                    TALIS 2024 tadqiqotida **50 dan ortiq mamlakat va iqtisodiy mintaqalar** ishtirok etmoqda, bu TALIS tarixidagi eng keng qamrovli tsikllardan biridir. O'zbekistonning ushbu tadqiqotdagi ishtiroki mamlakatimiz ta'lim tizimini xalqaro miqyosda baholash va takomillashtirishga bo'lgan jiddiy intilishimizni yaqqol ko'rsatadi.
+                </p>
+                <div class="country-list-container text-gray-700 text-sm">
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>🇺🇿 O'zbekiston</li>
+                        <li>🇦🇱 Albaniya</li>
+                        <li>🇨🇦 Alberta (Kanada)</li>
+                        <li>🇦🇺 Avstraliya</li>
+                        <li>🇦🇹 Avstriya</li>
+                        <li>🇦🇿 Ozarbayjon</li>
+                        <li>🇧🇭 Bahrayn</li>
+                        <li>🇧🇪 Belgiya (Flamand hamjamiyati)</li>
+                        <li>🇧🇪 Belgiya (Fransuz hamjamiyati)</li>
+                        <li>🇧🇷 Braziliya</li>
+                        <li>🇧🇬 Bolgariya</li>
+                        <li>🇨🇱 Chili</li>
+                        <li>🇨🇴 Kolumbiya</li>
+                        <li>🇨🇷 Kosta Rika</li>
+                        <li>�🇷 Xorvatiya</li>
+                        <li>🇨🇿 Chexiya Respublikasi</li>
+                        <li>🇨🇾 Kipr</li>
+                        <li>🇩🇰 Daniya</li>
+                        <li>🇪🇪 Estoniya</li>
+                        <li>🇫🇮 Finlandiya</li>
+                        <li>🇫🇷 Fransiya</li>
+                        <li>🇬🇪 Gruziya</li>
+                        <li>🇭🇺 Vengriya</li>
+                        <li>🇮🇸 Islandiya</li>
+                        <li>🇮🇪 Irlandiya</li>
+                        <li>🇮🇱 Isroil</li>
+                        <li>🇮🇹 Italiya</li>
+                        <li>🇯🇵 Yaponiya</li>
+                        <li>🇰🇿 Qozog'iston</li>
+                        <li>🇰🇷 Koreya</li>
+                        <li>🇽🇰 Kosovo</li>
+                        <li>🇱🇻 Latviya</li>
+                        <li>🇱🇹 Litva</li>
+                        <li>🇲🇹 Malta</li>
+                        <li>🇲🇽 Meksika</li>
+                        <li>🇲🇪 Chernogoriya</li>
+                        <li>🇲🇦 Marokash</li>
+                        <li>🇳🇱 Niderlandiya</li>
+                        <li>🇳🇿 Yangi Zelandiya</li>
+                        <li>🇲🇰 Shimoliy Makedoniya</li>
+                        <li>🇳🇴 Norvegiya</li>
+                        <li>🇵🇱 Polsha</li>
+                        <li>🇵🇹 Portugaliya</li>
+                        <li>🇷🇴 Ruminiya</li>
+                        <li>🇸🇦 Saudiya Arabistoni</li>
+                        <li>🇷🇸 Serbiya</li>
+                        <li>🇨🇳 Shanxay (Xitoy Xalq Respublikasi)</li>
+                        <li>🇸🇬 Singapur</li>
+                        <li>🇸🇰 Slovakiya Respublikasi</li>
+                        <li>🇸🇮 Sloveniya</li>
+                        <li>🇿🇦 Janubiy Afrika</li>
+                        <li>🇪🇸 Ispaniya</li>
+                        <li>🇸🇪 Shvetsiya</li>
+                        <li>🇹🇷 Turkiya</li>
+                        <li>🇦🇪 Birlashgan Arab Amirliklari</li>
+                        <li>🇺🇸 AQSh</li>
+                        <li>🇻🇳 Vyetnam</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">TALIS 2024 ning O'zbekiston uchun kutilayotgan asosiy afzalliklari:</h4>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">📊</span> Direktorlik korpusini obyektiv baholash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🎯</span> Boshqaruvdagi zaif nuqtalarni aniqlash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🌍</span> Xalqaro tajribalarni o'rganish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">💡</span> Ilmiy asoslangan siyosiy qarorlar qabul qilish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🚀</span> Strategik islohotlarga yo'l ochish</li>
+                </ul>
+            </div>
+
+            <div class="question-box text-gray-800">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Munozara: TALIS natijalari qanday amaliy qadamlarga asos bo'ladi?</h3>
+                <p class="text-gray-700">TALIS 2024 tadqiqoti natijalari e'lon qilingandan so'ng, O'zbekiston ta'lim tizimida maktab boshqaruvini takomillashtirish bo'yicha qanday eng muhim 3 ta amaliy qadam tashlanishi kerak deb hisoblaysiz?</p>
+            </div>
+
+            <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">Kutilayotgan ta'sirlar: Direktorlikning yangi modeli</h4>
+                <p class="text-lg opacity-90 mb-4">TALIS natijalari O'zbekiston maktab boshqaruvini transformatsiya qilishda muhim rol o'ynaydi:</p>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">💪</span> Direktorlarning pedagogik yetakchilik ko'nikmalarini kuchaytirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">✅</span> Ma'muriy yukni optimallashtirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🤝</span> Avtonomiya va hisobdorlik balansi</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">👥</span> Hamkorlik madaniyatini rivojlantirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🌟</span> Direktor kadrlar zaxirasini shakllantirish</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">Xalqaro tajribalarni O'zbekiston sharoitiga moslashtirish: O'ziga xos yechimlar</h4>
+                <p class="text-lg opacity-90 mb-4">Global amaliyotlarni O'zbekiston kontekstiga moslashtirish samaradorlikni ta'minlaydi:</p>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">🇸🇬</span> Singapur modelidan tizimli kadrlar tayyorlash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🇨🇦</span> Kanada modelidan demokratik ishtirokni kuchaytirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🇫🇮</span> Finlyandiya modelidan ishonch va avtonomiyani oshirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🧩</span> Milliy xususiyatlarni inobatga olgan holda moslashtirish</li>
+                </ul>
+            </div>
+
+             <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">Ta'lim tizimidagi boshqa islohotlar bilan boshqaruvning uyg'unligi</h4>
+                <p class="text-lg opacity-90 mb-4">TALIS natijalari ta'limdagi umumiy islohotlar bilan birgalikda kuchli sinergiya yaratadi:</p>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">📚</span> Yangi o'quv dasturlari va standartlarni samarali joriy etish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">⬆️</span> O'qituvchilarning kasbiy maqomini oshirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🛠️</span> Maktablarning moddiy-texnik bazasini yaxshilash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🤝</span> Boshqaruv qarorlari uchun ilmiy asos yaratish</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">Kutilayotgan muammolar va ularni yechish yo'llari: Strategik munosabat</h4>
+                <p class="text-lg opacity-90 mb-4">Islohot jarayonidagi ba'zi qiyinchiliklar va ularni yengish strategiyalari:</p>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">💰</span> Moliyalashtirish muammolari: Maqsadli investitsiyalar</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🧑‍🎓</span> Kadrlar salohiyatini shakllantirish: Uzluksiz ta'lim</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🚧</span> O'zgarishlarga qarshilik: Keng tushuntirish ishlari</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🧠</span> Ma'lumotlarni tahlil qilish: Qaror qabul qilish ko'nikmalarini oshirish</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/20 p-6 rounded-lg mb-8">
+                <h4 class="font-bold text-xl mb-3">Kelajak boshqaruvchi: Raqamlashtirish va "Aqlli maktablar" direktori</h4>
+                <p class="text-lg opacity-90 mb-4">21-asr direktori texnologik yetakchi bo'lishi lozim:</p>
+                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">💻</span> Raqamli yetakchilik va innovatsiyaga yo'naltirilganlik</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">📈</span> Ma'lumotlarga asoslangan qaror qabul qilish (Data-driven decision making)</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🤖</span> "Aqlli maktablar" konsepsiyasini joriy etish</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="xulosa" class="py-16 text-center">
+            <h2 class="text-3xl font-bold mb-12 section-title mx-auto text-gray-800">Xulosa: Samarali boshqaruv – Yangi O'zbekiston ta'limining kaliti</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                TALIS 2024da O'zbekistonning ishtiroki – bu nafaqat xalqaro tadqiqotga qo'shilish, balki maktab boshqaruvini chuqur tahlil qilish va uni sifat jihatidan yangi bosqichga olib chiqish uchun strategik investitsiyadir. Bu global ta'lim maydonida faol ishtirokchi va lider davlatlardan biri sifatida tan olinishimiz uchun muhim qadamdir.
+            </p>
+            <div class="question-box">
+                <h3 class="text-2xl font-bold mb-4 text-[#0E6BA8]">❓ Savol va javoblar: Munozaraga marhamat!</h3>
+                <p class="text-gray-700">Mavzu bo'yicha savollaringiz yoki fikr-mulohazalaringiz bo'lsa, marhamat!</p>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 mt-12 border-t">
+            <p class="text-gray-600">&copy; 2025. TALIS Infografikasi. Ma'lumotlar OECD rasmiy hisobotlariga asoslangan.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const brilliantBlues = ['#00A6ED', '#0E6BA8', '#4DA1A9', '#203647', '#A0D2DB'];
+
+        // Chart: Director Time Allocation
+        const directorTimeCtx = document.getElementById('directorTimeChart').getContext('2d');
+        new Chart(directorTimeCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Ma\'muriy vazifalar', 'Pedagogik yetakchilik', 'Boshqa vazifalar'],
+                datasets: [{
+                    label: 'Vaqt taqsimoti',
+                    data: [45, 25, 30],
+                    backgroundColor: brilliantBlues,
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart: Teacher Autonomy and Participation
+        const teacherAutonomyCtx = document.getElementById('teacherAutonomyChart').getContext('2d');
+        new Chart(teacherAutonomyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['O\'quv dasturini belgilash', 'Baholash metodlarini tanlash', 'Dars usullarini tanlash', 'Maktab qarorlarida ishtirok'].map(wrapLabel),
+                datasets: [{
+                    label: 'O\'qituvchining avtonomiya darajasi (%)',
+                    data: [65, 70, 80, 55],
+                    backgroundColor: brilliantBlues[2],
+                    borderColor: brilliantBlues[3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Professional Development Needs
+        const professionalDevelopmentCtx = document.getElementById('professionalDevelopmentChart').getContext('2d');
+        new Chart(professionalDevelopmentCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Raqamli pedagogika', 'Inklyuziv ta\'lim', 'Innovatsion baholash', 'Individual yondashuv'].map(wrapLabel),
+                datasets: [{
+                    label: 'Rivojlanishga ehtiyoj (%)',
+                    data: [78, 65, 50, 45],
+                    backgroundColor: brilliantBlues[0],
+                    borderColor: brilliantBlues[1],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Teacher Motivation
+        const motivationCtx = document.getElementById('motivationChart').getContext('2d');
+        new Chart(motivationCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Direktor qo\'llab-quvvatlashi', 'Hamkasblar bilan hamkorlik', 'Kasbiy avtonomiya', 'Kasbiy rivojlanish', 'Maosh'].map(wrapLabel),
+                datasets: [{
+                    label: 'Motivatsiyaga ta\'sir darajasi',
+                    data: [85, 82, 75, 70, 60],
+                    backgroundColor: brilliantBlues[0],
+                    borderColor: brilliantBlues[1],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Discipline and Safety
+        const disciplineCtx = document.getElementById('disciplineChart').getContext('2d');
+        new Chart(disciplineCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Tartibsiz xulq-atvor', 'Bulling', 'Darsda buzilishlar', 'Xavfsizlik hissiyoti (yuqori)'].map(wrapLabel),
+                datasets: [{
+                    label: 'Muammolar/Hissiyot (%)',
+                    data: [35, 20, 40, 75],
+                    backgroundColor: [brilliantBlues[4], brilliantBlues[3], brilliantBlues[2], brilliantBlues[0]],
+                    borderColor: brilliantBlues[1],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Country Comparison
+        const countryComparisonCtx = document.getElementById('countryComparisonChart').getContext('2d');
+        new Chart(countryComparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Avtonomiya', 'Hisobdorlik', 'Markazlashuv', ['Kasbiy', 'Rivojlanish'], 'Hamkorlik'],
+                datasets: [{
+                    label: 'Finlyandiya',
+                    data: [9, 6, 3, 8, 9],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                    borderColor: '#00A6ED',
+                    pointBackgroundColor: '#00A6ED'
+                }, {
+                    label: 'Kanada',
+                    data: [8, 7, 5, 7, 9],
+                     fill: true,
+                    backgroundColor: 'rgba(14, 107, 168, 0.2)',
+                    borderColor: '#0E6BA8',
+                    pointBackgroundColor: '#0E6BA8'
+                }, {
+                    label: 'Singapur',
+                    data: [5, 9, 8, 9, 6],
+                    fill: true,
+                    backgroundColor: 'rgba(77, 161, 169, 0.2)',
+                    borderColor: '#4DA1A9',
+                    pointBackgroundColor: '#4DA1A9'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart: Comparative Director Time
+        const compDirectorTimeCtx = document.getElementById('compDirectorTimeChart').getContext('2d');
+        new Chart(compDirectorTimeCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Finlyandiya', 'Kanada', 'Singapur'].map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Pedagogik yetakchilik (%)',
+                        data: [50, 40, 35],
+                        backgroundColor: brilliantBlues[0],
+                    },
+                    {
+                        label: 'Ma\'muriy vazifalar (%)',
+                        data: [20, 30, 40],
+                        backgroundColor: brilliantBlues[1],
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Comparative Autonomy
+        const compAutonomyCtx = document.getElementById('compAutonomyChart').getContext('2d');
+        new Chart(compAutonomyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Finlyandiya', 'Kanada', 'Singapur'].map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'O\'qituvchi avtonomiyasi (%)',
+                        data: [90, 70, 50],
+                        backgroundColor: brilliantBlues[2],
+                    },
+                    {
+                        label: 'Jamoatchilik ishtiroki (%)',
+                        data: [60, 85, 40],
+                        backgroundColor: brilliantBlues[3],
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: false,
+                    },
+                    y: {
+                        stacked: false,
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Comparative PD Role
+        const compPDChartCtx = document.getElementById('compPDChart').getContext('2d');
+        new Chart(compPDChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Finlyandiya', 'Kanada', 'Singapur'].map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Individual rivojlanishga e\'tibor (%)',
+                        data: [85, 60, 70],
+                        backgroundColor: brilliantBlues[0],
+                    },
+                    {
+                        label: 'Strategik treninglar (%)',
+                        data: [40, 50, 90],
+                        backgroundColor: brilliantBlues[4],
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Comparative Satisfaction
+        const compSatisfactionCtx = document.getElementById('compSatisfactionChart').getContext('2d');
+        new Chart(compSatisfactionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Finlyandiya', 'Kanada', 'Singapur'].map(wrapLabel),
+                datasets: [{
+                    label: 'O\'qituvchilarning kasbiy qoniqishi (%)',
+                    data: [92, 88, 85],
+                    backgroundColor: brilliantBlues[0],
+                    borderColor: brilliantBlues[1],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Chart: Comparative Discipline
+        const compDisciplineCtx = document.getElementById('compDisciplineChart').getContext('2d');
+        new Chart(compDisciplineCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Finlyandiya', 'Kanada', 'Singapur'].map(wrapLabel),
+                datasets: [{
+                    label: 'Intizomiy muammolar kamligi (%)',
+                    data: [95, 85, 90],
+                    backgroundColor: brilliantBlues[4],
+                    borderColor: brilliantBlues[3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+�
