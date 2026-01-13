@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             font-family: 'Roboto', sans-serif;
             scroll-behavior: smooth;
         }
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -22,20 +24,24 @@
             margin-right: auto;
             height: 300px;
         }
+
         @media (min-width: 768px) {
             .chart-container {
                 height: 300px;
             }
         }
-         .gradient-text {
+
+        .gradient-text {
             background: linear-gradient(45deg, #00A6ED, #0E6BA8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .kpi-card {
             background-color: #f8fafc;
             border-left: 5px solid #00A6ED;
         }
+
         .section-title::after {
             content: '';
             display: block;
@@ -45,12 +51,13 @@
             margin-top: 10px;
             border-radius: 2px;
         }
+
         .country-list-container {
             column-count: 2;
             column-gap: 20px;
-            max-height: 400px;
-            overflow-y: auto;
+            /* max-height removed to prevent horizontal overflow */
         }
+
         @media (min-width: 768px) {
             .country-list-container {
                 column-count: 3;
@@ -58,6 +65,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -76,15 +84,19 @@
     </header>
 
     <main class="container mx-auto p-4 md:p-8">
-        
+
         <section id="kirish" class="text-center py-16 px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-                <span class="gradient-text">Boshqaruv samaradorligini baholash mexanizmini TALIS dasturi asosida takomillashtirish</span>
+                <span class="gradient-text">Boshqaruv samaradorligini baholash mexanizmini TALIS dasturi asosida
+                    takomillashtirish</span>
             </h1>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Xalqaro TALIS dasturi talablari asosida O‘zbekiston 🇺🇿 Ta'lim tizimida maktab boshqaruvi va direktorlik salohiyatini oshirish Ta'lim sifatini oshirishga xizmat qiladi. TALIS tadqiqotining tahliliy ma'lumotlari Ta'lim tizimidagi chuqur o‘zgarishlar uchun ilmiy asos bo‘lib xizmat qiladi.
+                Xalqaro TALIS dasturi talablari asosida O‘zbekiston 🇺🇿 Ta'lim tizimida maktab boshqaruvi va
+                direktorlik salohiyatini oshirish Ta'lim sifatini oshirishga xizmat qiladi. TALIS tadqiqotining tahliliy
+                ma'lumotlari Ta'lim tizimidagi chuqur o‘zgarishlar uchun ilmiy asos bo‘lib xizmat qiladi.
             </p>
-            <a href="#talis-haqida" class="bg-gradient-to-r from-[#00A6ED] to-[#0E6BA8] text-white font-bold py-3 px-8 rounded-full hover:shadow-lg transition-transform transform hover:scale-105">
+            <a href="#talis-haqida"
+                class="bg-gradient-to-r from-[#00A6ED] to-[#0E6BA8] text-white font-bold py-3 px-8 rounded-full hover:shadow-lg transition-transform transform hover:scale-105">
                 Ko‘proq bilish
             </a>
         </section>
@@ -95,7 +107,8 @@
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">TALIS nima?</h3>
                     <p class="text-gray-600">
-                        Bu o‘qituvchilar va maktab direktorlarining ish sharoitlari, kasbiy rivojlanishi va pedagogik amaliyotlarini o‘rganuvchi yagona keng ko‘lamli xalqaro tadqiqotdir.
+                        Bu o‘qituvchilar va maktab direktorlarining ish sharoitlari, kasbiy rivojlanishi va pedagogik
+                        amaliyotlarini o‘rganuvchi yagona keng ko‘lamli xalqaro tadqiqotdir.
                     </p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -107,15 +120,17 @@
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">Nega boshqaruv muhim?</h3>
                     <p class="text-gray-600">
-                        Samarali maktab direktori o‘quv muhitini yaratadi, o‘qituvchilarning kasbiy o‘sishini qo‘llab-quvvatlaydi va islohotlarning muvaffaqiyatini ta'minlaydi.
+                        Samarali maktab direktori o‘quv muhitini yaratadi, o‘qituvchilarning kasbiy o‘sishini
+                        qo‘llab-quvvatlaydi va islohotlarning muvaffaqiyatini ta'minlaydi.
                     </p>
                 </div>
             </div>
-            
+
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
                 <h3 class="text-xl font-bold mb-3 text-[#0E6BA8]">TALIS 2024 tadqiqotining asosiy yo‘nalishlari</h3>
                 <p class="text-gray-600 mb-4">
-                    TALIS maktablardagi ekotizimni keng qamrovli tahlil qiladi, direktorning faoliyatini quyidagi asosiy yo‘nalishlar bo‘yicha baholaydi.
+                    TALIS maktablardagi ekotizimni keng qamrovli tahlil qiladi, direktorning faoliyatini quyidagi asosiy
+                    yo‘nalishlar bo‘yicha baholaydi.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
@@ -144,7 +159,7 @@
 
         <section id="talis-2018-natijalari" class="py-16 bg-gray-100 -mx-4 md:-mx-8 px-4 md:px-8 rounded-lg">
             <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">TALIS 2018 tadqiqotining tahlili</h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
                 <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
                     <div class="text-5xl font-extrabold text-[#00A6ED]">48</div>
@@ -154,7 +169,7 @@
                     <div class="text-5xl font-extrabold text-[#00A6ED]">260k+</div>
                     <div class="text-lg text-gray-600 mt-2">O‘qituvchi</div>
                 </div>
-                 <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
+                <div class="bg-white p-6 rounded-lg shadow-md kpi-card">
                     <div class="text-5xl font-extrabold text-[#00A6ED]">13k+</div>
                     <div class="text-lg text-gray-600 mt-2">Maktab direktori</div>
                 </div>
@@ -163,75 +178,127 @@
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
                 <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">TALIS 2018: Ishtirokchi davlatlar va hududlar</h3>
                 <p class="text-gray-600 mb-4">
-                    TALIS 2018 tadqiqotida dunyoning 48 ta mamlakati va iqtisodiy mintaqalari qamrab olindi. Bu tadqiqot natijalarining global miqyosda ishonchliligini va taqqoslanuvchanligini ta'minlaydi.
+                    TALIS 2018 tadqiqotida dunyoning 48 ta mamlakati va iqtisodiy mintaqalari qamrab olindi. Bu tadqiqot
+                    natijalarining global miqyosda ishonchliligini va taqqoslanuvchanligini ta'minlaydi.
                 </p>
                 <div class="country-list-container text-gray-700 text-sm">
-                    <ol class="list-decimal list-inside space-y-1">
-                        <li>🇦🇺 Avstraliya</li>
-                        <li>🇦🇹 Avstriya</li>
-                        <li>🇧🇪 Belgiya</li>
-                        <li>🇧🇷 Braziliya</li>
-                        <li>🇧🇬 Bolgariya</li>
-                        <li>🇨🇦 Kanada</li>
-                        <li>🇨🇱 Chili</li>
-                        <li>🇨🇴 Kolumbiya</li>
-                        <li>🇭🇷 Xorvatiya</li>
-                        <li>🇨🇿 Chexiya</li>
-                        <li>🇩🇰 Daniya</li>
-                        <li>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Angliya</li>
-                        <li>🇪🇪 Estoniya</li>
-                        <li>🇫🇮 Finlandiya</li>
-                        <li>🇫🇷 Fransiya</li>
-                        <li>🇬🇪 Gruziya</li>
-                        <li>🇩🇪 Germaniya</li>
-                        <li>🇭🇺 Vengriya</li>
-                        <li>🇮🇸 Islandiya</li>
-                        <li>🇮🇪 Irlandiya</li>
-                        <li>🇮🇱 Isroil</li>
-                        <li>🇮🇹 Italiya</li>
-                        <li>🇯🇵 Yaponiya</li>
-                        <li>🇰🇿 Qozog‘iston</li>
-                        <li>🇰🇷 Koreya</li>
-                        <li>🇱🇻 Latviya</li>
-                        <li>🇱🇹 Litvaniya</li>
-                        <li>🇲🇹 Malta</li>
-                        <li>🇲🇽 Meksika</li>
-                        <li>🇳🇱 Niderlandiya</li>
-                        <li>🇳🇿 Yangi Zelandiya</li>
-                        <li>🇲🇰 Shimoliy Makedoniya</li>
-                        <li>🇳🇴 Norvegiya</li>
-                        <li>🇵🇱 Polsha</li>
-                        <li>🇵🇹 Portugaliya</li>
-                        <li>🇷🇴 Ruminiya</li>
-                        <li>🇷🇺 Rossiya</li>
-                        <li>🇷🇸 Serbiya</li>
-                        <li>🇸🇬 Singapur</li>
-                        <li>🇸🇰 Slovakiya</li>
-                        <li>🇸🇮 Sloveniya</li>
-                        <li>🇿🇦 Janubiy Afrika</li>
-                        <li>🇪🇸 Ispaniya</li>
-                        <li>🇸🇪 Shvetsiya</li>
-                        <li>🇹🇷 Turkiya</li>
-                        <li>🇦🇪 BAA</li>
-                        <li>🇺🇸 AQSh</li>
+                    <ol class="list-none space-y-2 gap-4">
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/au.png" width="24"
+                                alt="Australia"> Avstraliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/at.png" width="24"
+                                alt="Austria"> Avstriya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/be.png" width="24"
+                                alt="Belgium"> Belgiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/br.png" width="24"
+                                alt="Brazil"> Braziliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/bg.png" width="24"
+                                alt="Bulgaria"> Bolgariya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ca.png" width="24"
+                                alt="Canada"> Kanada</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/cl.png" width="24"
+                                alt="Chile"> Chili</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/co.png" width="24"
+                                alt="Colombia"> Kolumbiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/hr.png" width="24"
+                                alt="Croatia"> Xorvatiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/cz.png" width="24"
+                                alt="Czechia"> Chexiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/dk.png" width="24"
+                                alt="Denmark"> Daniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/gb-eng.png" width="24"
+                                alt="England"> Angliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ee.png" width="24"
+                                alt="Estonia"> Estoniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/fi.png" width="24"
+                                alt="Finland"> Finlyandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/fr.png" width="24"
+                                alt="France"> Fransiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ge.png" width="24"
+                                alt="Georgia"> Gruziya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/de.png" width="24"
+                                alt="Germany"> Germaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/hu.png" width="24"
+                                alt="Hungary"> Vengriya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/is.png" width="24"
+                                alt="Iceland"> Islandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ie.png" width="24"
+                                alt="Ireland"> Irlandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/il.png" width="24"
+                                alt="Israel"> Isroil</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/it.png" width="24"
+                                alt="Italy"> Italiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/jp.png" width="24"
+                                alt="Japan"> Yaponiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/kz.png" width="24"
+                                alt="Kazakhstan"> Qozog‘iston</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/kr.png" width="24"
+                                alt="Korea"> Koreya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/lv.png" width="24"
+                                alt="Latvia"> Latviya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/lt.png" width="24"
+                                alt="Lithuania"> Litvaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/mt.png" width="24"
+                                alt="Malta"> Malta</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/mx.png" width="24"
+                                alt="Mexico"> Meksika</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/nl.png" width="24"
+                                alt="Netherlands"> Niderlandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/nz.png" width="24"
+                                alt="New Zealand"> Yangi Zelandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/mk.png" width="24"
+                                alt="North Macedonia"> Shimoliy Makedoniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/no.png" width="24"
+                                alt="Norway"> Norvegiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/pl.png" width="24"
+                                alt="Poland"> Polsha</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/pt.png" width="24"
+                                alt="Portugal"> Portugaliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ro.png" width="24"
+                                alt="Romania"> Ruminiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ru.png" width="24"
+                                alt="Russia"> Rossiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/rs.png" width="24"
+                                alt="Serbia"> Serbiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/sg.png" width="24"
+                                alt="Singapore"> Singapur</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/sk.png" width="24"
+                                alt="Slovakia"> Slovakiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/si.png" width="24"
+                                alt="Slovenia"> Sloveniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/za.png" width="24"
+                                alt="South Africa"> Janubiy Afrika</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/es.png" width="24"
+                                alt="Spain"> Ispaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/se.png" width="24"
+                                alt="Sweden"> Shvetsiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/tr.png" width="24"
+                                alt="Turkey"> Turkiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ae.png" width="24"
+                                alt="UAE"> BAA</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/us.png" width="24"
+                                alt="USA"> AQSh</li>
                     </ol>
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktor vaqti: Ma'muriyat va pedagogika o‘rtasidagi muvozanat</h3>
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Direktor vaqti: Ma'muriyat va pedagogika
+                        o‘rtasidagi muvozanat</h3>
                     <p class="text-gray-600 mb-4">
-                        TALIS 2018 natijalari bo‘yicha direktorlar o‘z ish vaqtining sezilarli qismini ma'muriy vazifalarga sarflashini ko‘rsatadi. Pedagogik yetakchilik uchun kamroq vaqt ajratiladi.
+                        TALIS 2018 natijalari bo‘yicha direktorlar o‘z ish vaqtining sezilarli qismini ma'muriy
+                        vazifalarga sarflashini ko‘rsatadi. Pedagogik yetakchilik uchun kamroq vaqt ajratiladi.
                     </p>
                     <div class="chart-container">
                         <canvas id="directorTimeChart"></canvas>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">O‘qituvchi avtonomiyasi va qaror qabul qilishdagi ishtirok</h3>
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">O‘qituvchi avtonomiyasi va qaror qabul qilishdagi
+                        ishtirok</h3>
                     <p class="text-gray-600 mb-4">
-                        Yuqori avtonomiya va ishtirokga ega o‘qituvchilarning kasbiy qoniqishi va innovatsion faoliyati sezilarli darajada yuqori bo‘lishi aniqlangan.
+                        Yuqori avtonomiya va ishtirokga ega o‘qituvchilarning kasbiy qoniqishi va innovatsion faoliyati
+                        sezilarli darajada yuqori bo‘lishi aniqlangan.
                     </p>
                     <div class="chart-container">
                         <canvas id="teacherAutonomyChart"></canvas>
@@ -241,9 +308,11 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Kasbiy rivojlanish va direktorning strategik ko‘magi</h3>
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Kasbiy rivojlanish va direktorning strategik
+                        ko‘magi</h3>
                     <p class="text-gray-600 mb-4">
-                        Direktorning qo‘llab-quvvatlashi o‘qituvchilarning raqamli pedagogika va innovatsiyalarni o‘zlashtirishiga bevosita yordam beradi.
+                        Direktorning qo‘llab-quvvatlashi o‘qituvchilarning raqamli pedagogika va innovatsiyalarni
+                        o‘zlashtirishiga bevosita yordam beradi.
                     </p>
                     <div class="chart-container">
                         <canvas id="professionalDevelopmentChart"></canvas>
@@ -252,19 +321,22 @@
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">O‘qituvchi motivatsiyasi: Muhitning roli</h3>
                     <p class="text-gray-600 mb-4">
-                        O‘qituvchilarning kasbiy qoniqishi uchun maktabdagi sog‘lom muhit va direktorning qo‘llab-quvvatlashi hal qiluvchi ahamiyatga ega.
+                        O‘qituvchilarning kasbiy qoniqishi uchun maktabdagi sog‘lom muhit va direktorning
+                        qo‘llab-quvvatlashi hal qiluvchi ahamiyatga ega.
                     </p>
-                     <div class="chart-container">
+                    <div class="chart-container">
                         <canvas id="motivationChart"></canvas>
                     </div>
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Maktab intizomi va xavfsizligi: Direktorning roli</h3>
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Maktab intizomi va xavfsizligi: Direktorning roli
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        Tartibli va xavfsiz maktab muhitini yaratish direktorning faoliyati va boshqaruv uslubiga bevosita bog‘liqdir.
+                        Tartibli va xavfsiz maktab muhitini yaratish direktorning faoliyati va boshqaruv uslubiga
+                        bevosita bog‘liqdir.
                     </p>
                     <div class="chart-container">
                         <canvas id="disciplineChart"></canvas>
@@ -273,18 +345,26 @@
                 <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
                     <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Maktab boshqaruvining strategik xulosalari</h3>
                     <div class="grid grid-cols-1 gap-4">
-                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span class="text-2xl mr-3">⏰</span><p class="font-medium text-gray-700">Vaqtni qayta taqsimlash</p></div>
-                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span class="text-2xl mr-3">🧑‍🎓</span><p class="font-medium text-gray-700">O‘qituvchiga avtonomiya berish</p></div>
-                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span class="text-2xl mr-3">📈</span><p class="font-medium text-gray-700">Uzluksiz rivojlanishga investitsiya</p></div>
+                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span class="text-2xl mr-3">⏰</span>
+                            <p class="font-medium text-gray-700">Vaqtni qayta taqsimlash</p>
+                        </div>
+                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span
+                                class="text-2xl mr-3">🧑‍🎓</span>
+                            <p class="font-medium text-gray-700">O‘qituvchiga avtonomiya berish</p>
+                        </div>
+                        <div class="flex items-center p-3 bg-blue-50 rounded-lg"><span class="text-2xl mr-3">📈</span>
+                            <p class="font-medium text-gray-700">Uzluksiz rivojlanishga investitsiya</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="qiyosiy-tahlil" class="py-16">
-             <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Liderlardan saboqlar: Boshqaruv modellari</h2>
-             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
-                 <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto">Liderlardan saboqlar: Boshqaruv
+                modellari</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Boshqaruvning uch modeli: Asosiy farqlar</h3>
                     <div class="chart-container">
                         <canvas id="countryComparisonChart"></canvas>
@@ -293,18 +373,21 @@
                 <div>
                     <div class="mb-6 bg-white p-6 rounded-lg shadow-md p-4">
                         <h4 class="font-bold text-lg text-[#0E6BA8]">🇫🇮 Finlyandiya: Ishonch va professionalizm</h4>
-                        <p class="text-gray-600 mt-2">Direktor va o‘qituvchilarga yuqori ishonch, minimal nazorat va keng avtonomiya beriladi.</p>
+                        <p class="text-gray-600 mt-2">Direktor va o‘qituvchilarga yuqori ishonch, minimal nazorat va
+                            keng avtonomiya beriladi.</p>
                     </div>
                     <div class="mb-6 bg-white p-6 rounded-lg shadow-md p-4">
                         <h4 class="font-bold text-lg text-[#0E6BA8]">🇨🇦 Kanada: Demokratik va hamkorlik</h4>
-                        <p class="text-gray-600 mt-2">Boshqaruv markazsizlashtirilgan. Qarorlar keng jamoatchilik ishtirokida qabul qilinadi.</p>
+                        <p class="text-gray-600 mt-2">Boshqaruv markazsizlashtirilgan. Qarorlar keng jamoatchilik
+                            ishtirokida qabul qilinadi.</p>
                     </div>
                     <div class="mb-6 bg-white p-6 rounded-lg shadow-md p-4">
                         <h4 class="font-bold text-lg text-[#0E6BA8]">🇸🇬 Singapur: Tizimli va natijadorlik</h4>
-                        <p class="text-gray-600 mt-2">Direktorlarni tanlash va tayyorlashga qattiq yondashiladi, tizim yuqori hisobdorlikka asoslanadi.</p>
+                        <p class="text-gray-600 mt-2">Direktorlarni tanlash va tayyorlashga qattiq yondashiladi, tizim
+                            yuqori hisobdorlikka asoslanadi.</p>
                     </div>
                 </div>
-             </div>
+            </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -314,7 +397,8 @@
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Qaror qabul qilishdagi avtonomiya: Qiyosiy tahlil</h3>
+                    <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">Qaror qabul qilishdagi avtonomiya: Qiyosiy tahlil
+                    </h3>
                     <div class="chart-container">
                         <canvas id="compAutonomyChart"></canvas>
                     </div>
@@ -337,93 +421,165 @@
             </div>
         </section>
 
-        <section id="uzbekiston-talis" class="py-16 bg-gradient-to-br from-[#00A6ED] to-[#0E6BA8] text-white -mx-4 md:-mx-8 px-4 md:px-8 rounded-lg">
-            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto border-white">O‘zbekiston 🇺🇿 uchun TALIS'ning ahamiyati va kelajak istiqbollari</h2>
+        <section id="uzbekiston-talis"
+            class="py-16 bg-gradient-to-br from-[#00A6ED] to-[#0E6BA8] text-white -mx-4 md:-mx-8 px-4 md:px-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title mx-auto border-white">O‘zbekiston 🇺🇿 uchun
+                TALIS'ning ahamiyati va kelajak istiqbollari</h2>
             <div class="text-center max-w-4xl mx-auto mb-12">
                 <p class="text-xl mb-4">
-                    🇺🇿 O‘zbekiston'ning TALIS 2024'da ilk bor ishtirok etishi – tizimimizni xalqaro standartlarga moslashishining yorqin namunasidir.
+                    🇺🇿 O‘zbekiston'ning TALIS 2024'da ilk bor ishtirok etishi – tizimimizni xalqaro standartlarga
+                    moslashishining yorqin namunasidir.
                 </p>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8 text-gray-800">
                 <h3 class="text-xl font-bold mb-4 text-[#0E6BA8]">TALIS 2024 ishtirokchi davlatlar (50 dan ortiq)</h3>
                 <div class="country-list-container text-gray-700 text-sm">
-                    <ol class="list-decimal list-inside space-y-1">
-                        <li>🇺🇿 O‘zbekiston</li>
-                        <li>🇦🇱 Albaniya</li>
-                        <li>🇦🇺 Avstraliya</li>
-                        <li>🇦🇿 Ozarbayjon</li>
-                        <li>🇧🇭 Bahrayn</li>
-                        <li>🇧🇪 Belgiya</li>
-                        <li>🇧🇷 Braziliya</li>
-                        <li>🇧🇬 Bolgariya</li>
-                        <li>🇨🇱 Chili</li>
-                        <li>🇨🇴 Kolumbiya</li>
-                        <li>🇨🇿 Chexiya</li>
-                        <li>🇩🇰 Daniya</li>
-                        <li>🇪🇪 Estoniya</li>
-                        <li>🇫🇮 Finlandiya</li>
-                        <li>🇫🇷 Fransiya</li>
-                        <li>🇬🇪 Gruziya</li>
-                        <li>🇭🇺 Vengriya</li>
-                        <li>🇮🇸 Islandiya</li>
-                        <li>🇮🇪 Irlandiya</li>
-                        <li>🇮🇱 Isroil</li>
-                        <li>🇮🇹 Italiya</li>
-                        <li>🇯🇵 Yaponiya</li>
-                        <li>🇰🇿 Qozog‘iston</li>
-                        <li>🇰🇷 Koreya</li>
-                        <li>🇱🇻 Latviya</li>
-                        <li>🇱🇹 Litva</li>
-                        <li>🇲🇹 Malta</li>
-                        <li>🇲🇽 Meksika</li>
-                        <li>🇳🇱 Niderlandiya</li>
-                        <li>🇳🇿 Yangi Zelandiya</li>
-                        <li>🇳🇴 Norvegiya</li>
-                        <li>🇵🇱 Polsha</li>
-                        <li>🇵🇹 Portugaliya</li>
-                        <li>🇷🇴 Ruminiya</li>
-                        <li>🇸🇦 Saudiya Arabistoni</li>
-                        <li>🇸🇬 Singapur</li>
-                        <li>🇪🇸 Ispaniya</li>
-                        <li>🇸🇪 Shvetsiya</li>
-                        <li>🇹🇷 Turkiya</li>
-                        <li>🇦🇪 BAA</li>
-                        <li>🇺🇸 AQSh</li>
-                        <li>🇻🇳 Vyetnam</li>
+                    <ol class="list-none space-y-2 gap-4">
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/al.png" width="24"
+                                alt="Albania"> Albaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/au.png" width="24"
+                                alt="Australia"> Avstraliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/at.png" width="24"
+                                alt="Austria"> Avstriya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/az.png" width="24"
+                                alt="Azerbaijan"> Ozarbayjon</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/bh.png" width="24"
+                                alt="Bahrain"> Bahrayn</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/br.png" width="24"
+                                alt="Brazil"> Braziliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/bg.png" width="24"
+                                alt="Bulgaria"> Bolgariya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/cl.png" width="24"
+                                alt="Chile"> Chili</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/co.png" width="24"
+                                alt="Colombia"> Kolumbiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/cr.png" width="24"
+                                alt="Costa Rica"> Kosta Rika</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/hr.png" width="24"
+                                alt="Croatia"> Xorvatiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/cz.png" width="24"
+                                alt="Czechia"> Chexiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/dk.png" width="24"
+                                alt="Denmark"> Daniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ee.png" width="24"
+                                alt="Estonia"> Estoniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/fi.png" width="24"
+                                alt="Finland"> Finlyandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/fr.png" width="24"
+                                alt="France"> Fransiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/de.png" width="24"
+                                alt="Germany"> Germaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/hu.png" width="24"
+                                alt="Hungary"> Vengriya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/is.png" width="24"
+                                alt="Iceland"> Islandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ie.png" width="24"
+                                alt="Ireland"> Irlandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/il.png" width="24"
+                                alt="Israel"> Isroil</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/it.png" width="24"
+                                alt="Italy"> Italiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/jp.png" width="24"
+                                alt="Japan"> Yaponiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/kz.png" width="24"
+                                alt="Kazakhstan"> Qozog‘iston</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/kr.png" width="24"
+                                alt="South Korea"> Koreya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/lv.png" width="24"
+                                alt="Latvia"> Latviya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/lt.png" width="24"
+                                alt="Lithuania"> Litva</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/mt.png" width="24"
+                                alt="Malta"> Malta</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/me.png" width="24"
+                                alt="Montenegro"> Chernogoriya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ma.png" width="24"
+                                alt="Morocco"> Marokash</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/nl.png" width="24"
+                                alt="Netherlands"> Niderlandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/nz.png" width="24"
+                                alt="New Zealand"> Yangi Zelandiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/mk.png" width="24"
+                                alt="North Macedonia"> Shimoliy Makedoniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/no.png" width="24"
+                                alt="Norway"> Norvegiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/pl.png" width="24"
+                                alt="Poland"> Polsha</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/pt.png" width="24"
+                                alt="Portugal"> Portugaliya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ro.png" width="24"
+                                alt="Romania"> Ruminiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/sa.png" width="24"
+                                alt="Saudi Arabia"> Saudiya Arabistoni</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/rs.png" width="24"
+                                alt="Serbia"> Serbiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/sg.png" width="24"
+                                alt="Singapore"> Singapur</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/sk.png" width="24"
+                                alt="Slovakia"> Slovakiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/si.png" width="24"
+                                alt="Slovenia"> Sloveniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/za.png" width="24"
+                                alt="South Africa"> Janubiy Afrika</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/es.png" width="24"
+                                alt="Spain"> Ispaniya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/se.png" width="24"
+                                alt="Sweden"> Shvetsiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/tr.png" width="24"
+                                alt="Turkey"> Turkiya</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ae.png" width="24"
+                                alt="UAE"> BAA</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/us.png" width="24"
+                                alt="USA"> AQSh</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/uz.png" width="24"
+                                alt="Uzbekistan"> O‘zbekiston</li>
+                        <li class="flex items-center gap-2"><img src="https://flagcdn.com/w40/vn.png" width="24"
+                                alt="Vietnam"> Vyetnam</li>
                     </ol>
                 </div>
             </div>
 
             <div class="bg-white/20 p-6 rounded-lg mb-8">
-                <h4 class="font-bold text-xl mb-3">TALIS 2024'ning O‘zbekiston 🇺🇿 uchun kutilayotgan asosiy afzalliklari:</h4>
-                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
-                    <li class="flex items-center"><span class="text-2xl mr-3">📊</span> Direktorlik korpusini obyektiv baholash</li>
-                    <li class="flex items-center"><span class="text-2xl mr-3">🎯</span> Boshqaruvdagi zaif nuqtalarni aniqlash</li>
-                    <li class="flex items-center"><span class="text-2xl mr-3">🌍</span> Xalqaro tajribalarni o‘rganish</li>
-                    <li class="flex items-center"><span class="text-2xl mr-3">💡</span> Ilmiy asoslangan qarorlar qabul qilish</li>
+                <h4 class="font-bold text-xl mb-3">TALIS 2024'ning O‘zbekiston 🇺🇿 uchun kutilayotgan asosiy
+                    afzalliklari:</h4>
+                <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">📊</span> Direktorlik korpusini obyektiv
+                        baholash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🎯</span> Boshqaruvdagi zaif nuqtalarni
+                        aniqlash</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🌍</span> Xalqaro tajribalarni o‘rganish
+                    </li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">💡</span> Ilmiy asoslangan qarorlar qabul
+                        qilish</li>
                 </ul>
             </div>
 
             <div class="bg-white/20 p-6 rounded-lg mb-8">
                 <h4 class="font-bold text-xl mb-3">Islohotlardagi sinergiya:</h4>
-                 <ul class="list-none text-left space-y-2 max-w-md mx-auto">
-                    <li class="flex items-center"><span class="text-2xl mr-3">📚</span> Yangi o‘quv dasturlarini samarali joriy etish</li>
-                    <li class="flex items-center"><span class="text-2xl mr-3">⬆️</span> O‘qituvchilarning kasbiy maqomini oshirish</li>
-                    <li class="flex items-center"><span class="text-2xl mr-3">🛠️</span> Moddiy-texnik bazani yaxshilash</li>
+                <ul class="list-none text-left space-y-2 max-w-md mx-auto">
+                    <li class="flex items-center"><span class="text-2xl mr-3">📚</span> Yangi o‘quv dasturlarini
+                        samarali joriy etish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">⬆️</span> O‘qituvchilarning kasbiy
+                        maqomini oshirish</li>
+                    <li class="flex items-center"><span class="text-2xl mr-3">🛠️</span> Moddiy-texnik bazani yaxshilash
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section id="xulosa" class="py-16 text-center">
-            <h2 class="text-3xl font-bold mb-12 section-title mx-auto text-gray-800">Xulosa: Samarali boshqaruv – Yangi O‘zbekiston Ta'limining kaliti</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title mx-auto text-gray-800">Xulosa: Samarali boshqaruv – Yangi
+                O‘zbekiston Ta'limining kaliti</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                TALIS 2024'da O‘zbekiston'ning 🇺🇿 ishtiroki – bu nafaqat tadqiqotga qo‘shilish, balki maktab boshqaruvini sifat jihatidan yangi bosqichga olib chiqish uchun strategik investitsiyadir.
+                TALIS 2024'da O‘zbekiston'ning 🇺🇿 ishtiroki – bu nafaqat tadqiqotga qo‘shilish, balki maktab
+                boshqaruvini sifat jihatidan yangi bosqichga olib chiqish uchun strategik investitsiyadir.
             </p>
         </section>
 
         <footer class="text-center py-8 mt-12 border-t">
-            <p class="text-gray-600">&copy; 2025. TALIS infografikasi. Ma'lumotlar OECD rasmiy hisobotlariga asoslangan.</p>
+            <p class="text-gray-600">&copy; 2025. TALIS infografikasi. Ma'lumotlar OECD rasmiy hisobotlariga asoslangan.
+            </p>
         </footer>
 
     </main>
@@ -529,7 +685,7 @@
         // Chart: Discipline
         const disciplineCtx = document.getElementById('disciplineChart').getContext('2d');
         new Chart(disciplineCtx, {
-            type: 'bar', 
+            type: 'bar',
             data: {
                 labels: ['Bulling (kam)', 'Xavfsizlik (yuqori)'],
                 datasets: [{
@@ -648,4 +804,5 @@
 
     </script>
 </body>
+
 </html>
